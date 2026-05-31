@@ -1,0 +1,86 @@
+{
+  "info": {
+    "_postman_id": "e77f278c-e56f-492a-a4d0-209db03327e5",
+    "name": "DSAML_Migration",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32654652",
+    "_collection_link": "https://go.postman.co/collection/32654652-e77f278c-e56f-492a-a4d0-209db03327e5?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Collection Service",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:53982/api/Catalog/GetCatalog",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "53982",
+          "path": [
+            "api",
+            "Catalog",
+            "GetCatalog"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Orders",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:50161/api/Order/GetOrders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "50161",
+          "path": [
+            "api",
+            "Order",
+            "GetOrders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Proxy",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:53975/api/catalog/Getcatalog",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "53975",
+          "path": [
+            "api",
+            "catalog",
+            "Getcatalog"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
