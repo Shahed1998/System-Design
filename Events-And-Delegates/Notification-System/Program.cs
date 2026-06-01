@@ -28,13 +28,13 @@
         notify += SendEmail;
         notify += SendNotification;
 
-        notify(msg01);
+        notify?.Invoke(msg01);
 
         var msg02 = "Demo has left the chat";
 
         // Unsubscribe
         notify -= SendEmail;
-        notify(msg02);
+        notify?.Invoke(msg02);
 
 
     }
