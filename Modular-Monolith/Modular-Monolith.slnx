@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/Modules/" />
+  <Project Path="API/API.csproj" />
+  <Project Path="Modular-Monolith/AppHost.csproj" />
+</Solution>
