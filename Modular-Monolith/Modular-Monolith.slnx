@@ -1,5 +1,10 @@
 <Solution>
   <Folder Name="/Modules/" />
+  <Folder Name="/Modules/Inventory/">
+    <Project Path="Inventory.Application/Inventory.Application.csproj" Id="33e235a0-a569-4c02-a93e-0afb9ed3394a" />
+    <Project Path="Inventory.Domain/Inventory.Domain.csproj" Id="1099da70-54c7-4d34-9d25-b422dba6f8d7" />
+    <Project Path="Inventory.Infrastructure/Inventory.Infrastructure.csproj" Id="f65dc5c5-00aa-4dc4-b0ec-edda1444846d" />
+  </Folder>
   <Project Path="API/API.csproj" />
-  <Project Path="Modular-Monolith/AppHost.csproj" />
+  <Project Path="AppHost/AppHost.csproj" />
 </Solution>
