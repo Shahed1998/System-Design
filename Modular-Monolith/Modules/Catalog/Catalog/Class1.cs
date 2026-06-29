@@ -1,4 +1,4 @@
-﻿namespace Inventory.Infrastructure
+﻿namespace Catalog
 {
     public class Class1
     {

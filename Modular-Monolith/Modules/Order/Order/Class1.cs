@@ -1,4 +1,4 @@
-﻿namespace Inventory.Application
+﻿namespace Order
 {
     public class Class1
     {

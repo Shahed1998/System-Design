@@ -1,10 +1,18 @@
 <Solution>
-  <Folder Name="/Modules/" />
-  <Folder Name="/Modules/Inventory/">
-    <Project Path="Inventory.Application/Inventory.Application.csproj" Id="33e235a0-a569-4c02-a93e-0afb9ed3394a" />
-    <Project Path="Inventory.Domain/Inventory.Domain.csproj" Id="1099da70-54c7-4d34-9d25-b422dba6f8d7" />
-    <Project Path="Inventory.Infrastructure/Inventory.Infrastructure.csproj" Id="f65dc5c5-00aa-4dc4-b0ec-edda1444846d" />
+  <Folder Name="/Bootstrapper/">
+    <Project Path="Bootstrapper/API/API.csproj" Id="833e456e-8bb0-4120-a20b-283546838e5b" />
   </Folder>
-  <Project Path="API/API.csproj" />
-  <Project Path="AppHost/AppHost.csproj" />
+  <Folder Name="/Modules/" />
+  <Folder Name="/Modules/Basket/">
+    <Project Path="Modules/Basket/Basket/Basket.csproj" Id="b5f3d8d3-f986-44b4-9e79-4ad92f330f34" />
+  </Folder>
+  <Folder Name="/Modules/Catalog/">
+    <Project Path="Modules/Catalog/Catalog/Catalog.csproj" Id="17a44d96-52bc-40fb-9207-bceda6c3b52a" />
+  </Folder>
+  <Folder Name="/Modules/Order/">
+    <Project Path="Modules/Order/Order/Order.csproj" Id="779860aa-0312-4d59-97fc-0c18f6500a7d" />
+  </Folder>
+  <Folder Name="/Shared/">
+    <Project Path="Shared/Shared/Shared.csproj" Id="78f9f8e3-1625-4017-8f0c-7b5e92183386" />
+  </Folder>
 </Solution>
