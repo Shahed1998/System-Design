@@ -1,7 +1,3 @@
-using Basket;
-using Catalog;
-using Order;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add service to the container
