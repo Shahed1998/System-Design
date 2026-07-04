@@ -12,9 +12,9 @@
 
         public IDomainEvent[] ClearDomainEvents()
         {
-            IDomainEvent[] dequeuedEvents = _domainEvents.ToArray();
+            IDomainEvent[] domainEvents = _domainEvents.ToArray();
             _domainEvents.Clear();
-            return dequeuedEvents;
+            return domainEvents;
         }
     }
 }
