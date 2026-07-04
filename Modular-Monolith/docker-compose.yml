@@ -1,0 +1,7 @@
+services:
+  eshopDB:
+    image: postgres:17
+
+volumes:
+  postgres_eshopDB:
+ 
