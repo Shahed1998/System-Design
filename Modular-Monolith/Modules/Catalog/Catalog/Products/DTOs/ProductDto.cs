@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Catalog.Products.DTOs
+﻿namespace Catalog.Products.DTOs
 {
     public record ProductDto(
         Guid Id,
