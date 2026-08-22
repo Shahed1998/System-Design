@@ -1,6 +1,4 @@
-﻿using Catalog.Data;
-using Catalog.Data.Seed;
-using Microsoft.AspNetCore.Builder;
+﻿using Catalog.Data.Seed;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
