@@ -11,6 +11,9 @@ builder.Services
     .AddBasketModule(builder.Configuration)
     .AddOrderModule(builder.Configuration);
 
+
+builder.Services.AddOpenApi();
+
 var app = builder.Build();
 
 app.MapCarter();
@@ -20,5 +23,17 @@ app
     .UseCatalogModule()
     .UseBasketModule()
     .UseOrderModule();
+
+
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/openapi/v1.json", "My API V1");
+    });
+}
+
 
 app.Run();
