@@ -5,10 +5,10 @@
     {
         public void AddRoutes(IEndpointRouteBuilder app)
         {
-            app.MapDelete("/products/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("/products/{id}", async (Guid id, ISender sender, CancellationToken cancellationToken) =>
             {
                 var command = new DeleteProductCommand(id);
-                var result = await sender.Send(command);
+                var result = await sender.Send(command, cancellationToken);
                 var response = result.Adapt<DeleteProductResponse>();
                 return Results.Ok(response);
             })

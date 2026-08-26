@@ -6,10 +6,10 @@
     {
         public void AddRoutes(IEndpointRouteBuilder app)
         {
-            app.MapGet("/products", async (ISender sender) =>
+            app.MapGet("/products", async (ISender sender, CancellationToken cancellationToken) =>
             {
                 var query = new GetProductQuery();
-                var result = await sender.Send(query);
+                var result = await sender.Send(query, cancellationToken);
                 var response = result.Adapt<GetProductResponse>();
                 return Results.Ok(response);
             })
