@@ -25,9 +25,9 @@ namespace Catalog.Products.Features.UpdateProduct
 
             var product = await dbcontext.Products.FindAsync(new object[] { command.Product.Id }, cancellationToken);
 
-            if (product == null)
+            if (product is null)
             {
-                return new UpdateProductResult(false);
+                throw new ProductNotFoundException(command.Product.Id);
             }
 
             UpdateProductWithNewValues(product, command.Product);

@@ -22,9 +22,9 @@ namespace Catalog.Products.Features.DeleteProduct
 
             var product = await dbcontext.Products.FindAsync(new object[] { command.ProductId }, cancellationToken);
 
-            if (product == null)
+            if (product is null)
             {
-                return new DeleteProductResult(false);
+                throw new ProductNotFoundException(command.ProductId);
             }
 
             // Implementation for deleting a product
