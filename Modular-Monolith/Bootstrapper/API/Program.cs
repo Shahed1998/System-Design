@@ -1,4 +1,5 @@
 using Carter;
+using Shared.Exceptions.Handlers;
 using Shared.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,8 @@ builder.Services
 
 
 builder.Services.AddOpenApi();
+
+builder.Services.AddExceptionHandler<CustomExceptionHandler>();
 
 var app = builder.Build();
 
@@ -35,5 +38,6 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+app.UseExceptionHandler(options => { });
 
 app.Run();
