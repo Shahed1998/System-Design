@@ -1,8 +1,12 @@
 using Carter;
+using Serilog;
 using Shared.Exceptions.Handlers;
 using Shared.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog((context, configuration) =>
+    configuration.ReadFrom.Configuration(context.Configuration));
 
 // Add service to the container
 builder.Services.AddCarterWithAssemblies(typeof(CatalogModule).Assembly);
@@ -20,6 +24,8 @@ builder.Services.AddExceptionHandler<CustomExceptionHandler>();
 var app = builder.Build();
 
 app.MapCarter();
+app.UseSerilogRequestLogging();
+app.UseExceptionHandler(options => { });
 
 // Configure HTTP pipeline
 app
@@ -38,6 +44,6 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-app.UseExceptionHandler(options => { });
+
 
 app.Run();

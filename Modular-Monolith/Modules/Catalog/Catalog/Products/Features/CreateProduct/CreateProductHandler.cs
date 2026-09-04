@@ -3,7 +3,7 @@
 namespace Catalog.Products.Features.CreateProduct
 {
 
-    public record CreateProductCommand(ProductDto Product) : ICommand<CreateProductResult>;
+    public record CreateProductCommand(CreateProductDto Product) : ICommand<CreateProductResult>;
 
     public class CreateProductCommandValidator : AbstractValidator<CreateProductCommand>
     {
@@ -25,16 +25,13 @@ namespace Catalog.Products.Features.CreateProduct
             (CreateProductCommand command,
             CancellationToken cancellationToken)
         {
-
-            logger.LogInformation("CreateProductHandler.Handle is called with command: {Command}", command);
-
             var product = CreateNewProduct(command.Product);
             dbcontext.Products.Add(product);
             await dbcontext.SaveChangesAsync(cancellationToken);
             return new CreateProductResult(product.Id);
         }
 
-        private Product CreateNewProduct(ProductDto product)
+        private Product CreateNewProduct(CreateProductDto product)
         {
             var newProduct = Product.Create(
                 Guid.NewGuid(),
