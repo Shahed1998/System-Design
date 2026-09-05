@@ -10,3 +10,13 @@ services:
       - "6000:5432" # HOST_PORT:CONTAINER_PORT 
     volumes:
       - postgres_eshopDB:/var/lib/postgresql/data
+
+  seq:
+    container_name: seq
+    environment:
+      ACCEPT_EULA: "Y"
+      SEQ_FIRSTRUN_NOAUTHENTICATION: "True"
+    restart: always
+    ports:
+      - "5341:5341" # HOST_PORT:CONTAINER_PORT 
+      - "9091:80" # HOST_PORT:CONTAINER_PORT  
